@@ -12,7 +12,7 @@ const EditProfile = () => {
     useEffect(()=>{  
         setValue('name',getUserData?.data?.name)
         setValue('email',getUserData?.data?.email)
-        setImageUrl(`http://localhost:4000/${getUserData?.data?.image}`) 
+        setImageUrl(`${process.env.REACT_APP_BACKEND_URL}/${getUserData?.data?.image}`) 
     },[getUserData])
 
     const submitForm = (data) => { 
