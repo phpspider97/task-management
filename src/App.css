@@ -1,38 +1,58 @@
-.App {
-  text-align: center;
+body{
+    padding : 13px; 
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-div{
+    margin-left:30%;
+    width: 500px;
+    border: 2px dashed black;
+    margin-top:10%;
+    padding: 40px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.top-container{
+    border-bottom: 3px solid black;
+    margin-bottom: 40px;
+    height: 50px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.bottom-container{ 
+    border-top: 3px solid black;
 }
-
-.App-link {
-  color: #61dafb;
+.left-bar{
+    margin-left: 5px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.link-style{
+    color: black;
+    text-decoration: underline;
+    text-align: center;
+}
+.error-message{
+    color:red;
+    font-size: 12px;
+}
+.form-container{
+    border: 1px solid rgba(0, 0, 0, 0.307);
+    padding: 30px;
+    width:1100px;
+    margin-left: 20px;
+}
+.show-pointer{
+    cursor: pointer;
+    text-decoration: underline;
+    color:black;
+}
+.show-only-pointer{
+    cursor: pointer; 
+    text-decoration: none;
+    color:black;
+}
+.analysis-circle{
+    font-size: 12px;
+    background: rgba(202, 9, 9, 0.76);
+    border-radius: 50px;
+    padding: 5px 3px 6px 10px;
+    text-align: center;
+    color: aliceblue;
+}
+.custom-image-size{
+    height: 70px;
+    width: 70px;
 }
