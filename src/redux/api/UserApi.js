@@ -3,7 +3,7 @@ const token = sessionStorage.getItem('token')
 export const userApi = createApi({
     reducerPath: 'userApi',
     baseQuery: fetchBaseQuery({ 
-        baseUrl: 'http://localhost:4000/user',
+        baseUrl: `${process.env.REACT_APP_BACKEND_URL}/user`,
         prepareHeaders: (headers, { getState }) => {
             headers.set('authorization', `Bearer ${token}`)
             return headers
