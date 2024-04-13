@@ -1,0 +1,79 @@
+{
+    "apps": [
+        {
+            "name": "user",
+            "cwd": "/Applications/MAMP/htdocs/task/backend/user",
+            "script": "./src/index.js",
+            "ignore_watch": ["node_modules"],
+            "instances": 1,
+            "exec_mode": "fork",
+            "watch": true,
+            "autorestart":true,
+            "env": {
+                "NODE_ENV": "development",
+                "PORT":3001,
+                "MONGO_URL":"mongodb+srv://neelbhardwaj97:RSzOLzO5h5SHLDsG@new.3wtvzhw.mongodb.net/user?retryWrites=true&w=majority"
+            },
+            "env_production": {
+                "NODE_ENV": "production"
+            }
+        },
+        {
+            "name": "task",
+            "cwd": "/Applications/MAMP/htdocs/task/backend/task",
+            "script": "./src/index.js",
+            "ignore_watch": ["node_modules"],
+            "instances": 1,
+            "exec_mode": "fork",
+            "watch": true,
+            "autorestart":true,
+            "env": {
+                "NODE_ENV": "development",
+                "PORT":3002,
+                "MONGO_URL":"mongodb+srv://neelbhardwaj97:RSzOLzO5h5SHLDsG@new.3wtvzhw.mongodb.net/task?retryWrites=true&w=majority"
+            },
+            "env_production": {
+                "NODE_ENV": "production"
+            }
+        },
+        {
+            "name": "chat",
+            "cwd": "/Applications/MAMP/htdocs/task/backend/chat",
+            "script": "./src/index.js",
+            "ignore_watch": ["node_modules"],
+            "instances": 1,
+            "exec_mode": "fork",
+            "watch": true,
+            "autorestart":true,
+            "env": {
+                "NODE_ENV": "development",
+                "PORT":3004,
+                "MONGO_URL":"mongodb+srv://neelbhardwaj97:RSzOLzO5h5SHLDsG@new.3wtvzhw.mongodb.net/chat?retryWrites=true&w=majority"
+            },
+            "env_production": {
+                "NODE_ENV": "production"
+            }
+        },
+        {
+            "name": "registry",
+            "cwd": "/Applications/MAMP/htdocs/task/backend/registry",
+            "script": "./index.js",
+            "ignore_watch": ["node_modules"],
+            "instances": 1,
+            "exec_mode": "fork",
+            "watch": true,
+            "autorestart":true,
+            "env": {
+                "NODE_ENV": "development",
+                "USER_PORT":3001,
+                "TASK_PORT":3002,
+                "REGISTRY_PORT":3003,
+                "CHAT_PORT":3004
+            },
+            "env_production": {
+                "NODE_ENV": "production"
+            }
+        }
+    ]
+  }
+  

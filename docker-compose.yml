@@ -1,0 +1,36 @@
+version: '1.0'
+
+services: 
+  backend_user_service:
+    build: ./backend/user
+    restart: always
+    ports:
+      - "3001:3001"
+    environment:
+      - MONGODB_URI=mongodb+srv://neelbhardwaj97:RSzOLzO5h5SHLDsG@new.3wtvzhw.mongodb.net/user?retryWrites=true&w=majority
+      - PORT=3001
+  backend_task_service:
+    build: ./backend/task
+    restart: always
+    ports:
+      - "3002:3002"
+    environment:
+      - MONGODB_URI=mongodb+srv://neelbhardwaj97:RSzOLzO5h5SHLDsG@new.3wtvzhw.mongodb.net/task?retryWrites=true&w=majority
+      - PORT=3002
+  backend_registry_service:
+    build: ./backend/registry
+    restart: always
+    ports:
+      - "3003:3003"
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017/mydatabase
+      - USER_PORT=3001
+      - TASK_PORT=3002
+      - REGISTRY_PORT=3003    
+  frontend_service:
+    build: ./frontend
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017/mydatabase        
